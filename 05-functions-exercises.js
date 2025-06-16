@@ -303,27 +303,19 @@ Write some lines of code to test if your function works correctly.
 */
 
 const rps = (player1, player2) => {
-  if (player1 === "Rock" && player2 === "Rock") {
+  if (player1 === player2) {
     return 0;
-  } else if (player1 === "Rock" && player2 === "Scissors") {
+  } else if (
+    (player1 === "Rock" && player2 === "Scissors") ||
+    (player1 === "Paper" && player2 === "Rock") ||
+    (player1 === "Scissors" && player2 === "Paper")
+  ) {
     return 1;
-  } else if (player1 === "Rock" && player2 === "Paper") {
+  } else {
     return -1;
-  } else if (player1 === "Paper" && player2 === "Rock") {
-    return 1;
-  } else if (player1 === "Paper" && player2 === "Paper") {
-    return 0;
-  } else if (player1 === "Paper" && player2 === "Scissors") {
-    return -1;
-  } else if (player1 === "Scissors" && player2 === "Rock") {
-    return -1;
-  } else if (player1 === "Scissors" && player2 === "Paper") {
-    return 1;
-  } else if (player1 === "Scissors" && player2 === "Scissors") {
-    return 0;
   }
 };
 
-console.log(rps("Scissors", "Paper"));
+console.log(rps("Scissors", "Rock"));
 
 process.stdout.write("\n");
