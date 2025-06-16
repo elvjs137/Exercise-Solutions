@@ -403,7 +403,13 @@ const betterPassword = (password1, password2) => {
     : password2;
 };
 
-console.log(betterPassword("gd7jd7!", "gjsjsudk"));
-console.log(betterPassword("pass2word", "pass?word"));
+console.log(
+  "password1 has more points ",
+  betterPassword("gd7jd7!", "gjsjsudk") === "gd7jd7!"
+);
+console.log(
+  "password2 has more points ",
+  betterPassword("pass2word", "pass?word") === "pass?word"
+);
 
 process.stdout.write("\n");
