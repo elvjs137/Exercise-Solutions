@@ -399,8 +399,8 @@ const calculatePoints = (password) => {
 
 const betterPassword = (password1, password2) => {
   return calculatePoints(password1) > calculatePoints(password2)
-    ? "password1"
-    : "password2";
+    ? password1
+    : password2;
 };
 
 console.log(betterPassword("gd7jd7!", "gjsjsudk"));
